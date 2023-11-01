@@ -7,6 +7,7 @@ import { HomeComponent } from './home/containers/home/home.component';
 import { LoginComponent } from './login/components/login/login.component';
 import { HovbarComponent } from '../core/shared/components/hovbar/hovbar.component';
 import { RegisterComponent } from './register/register.component';
+import { CardproductComponent } from './cardproduct/cardproduct.component';
 
 
 
@@ -16,7 +17,8 @@ import { RegisterComponent } from './register/register.component';
     HomeComponent,
     LoginComponent,
     HovbarComponent,
-    RegisterComponent
+    RegisterComponent,
+    CardproductComponent
   ],
   imports: [
     CommonModule,

@@ -6,6 +6,7 @@ import { HomeComponent } from './home/containers/home/home.component';
 import { LoginComponent } from './login/components/login/login.component';
 import { HovbarComponent } from '../core/shared/components/hovbar/hovbar.component';
 import { RegisterComponent } from './register/register.component';
+import { CardproductComponent } from './cardproduct/cardproduct.component';
 
 
 const routes: Routes = [ 
@@ -15,7 +16,8 @@ const routes: Routes = [
        { path: 'home', component: HomeComponent},
        { path:'login', component: LoginComponent},
        { path: "hovbar", component: HovbarComponent},
-       { path: "register", component: RegisterComponent}
+       { path: "register", component: RegisterComponent},
+       { path: "product", component: CardproductComponent}
     ]
   }
 ]
