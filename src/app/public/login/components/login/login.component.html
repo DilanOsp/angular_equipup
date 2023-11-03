@@ -1,33 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="formulario">
-<h1>Inicio de sesion</h1>
-<form method="post">
-    <div class="username">
-<input type="text" required> 
-<label> Nombre de usuario</label>
-    </div>
-    <div class="username">
-        <input type="password" required>
-        <label>Contraseña</label>
-
-    </div>
-    <input routerLink="/home" type="submit" value="Iniciar sesion">
-    <div class="registrarse">
-       <a routerLink="/register">Registrate aqui</a>
-
-    </div>
-
-</form>
-    </div>
+    <section class="form-registro">
+        <h1>INICIO DE SESION</h1>
+        <input class="controls" type="text" name="nombre" id="nombres"placeholder="Nombre de Usuario">
+        <input class="controls" type="password" name="nombre" id="nombres"placeholder="Ingrese su contraseña">
+        <input class="botons" type="submit" value="Registrar">
+        <p> <a routerLink="/register"> Registrate Aqui</a></p>
+      
+    
+    </section>
+    
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Producto</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h3>EquipUp</h3>
+        <h2>Subir un Producto</h2>
+        <form action="procesar_producto.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nombre">Nombre del producto:</label>
+                <input type="text" id="nombre_prod" name="nombre_prod" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre del propietario:</label>
+                <input type="text" id="nombre_prop" name="nombre_prop" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción del producto:</label>
+                <input type="text" id="descripcion" name="descripcion" required>
+            </div>
+            <div class="form-group">
+                <label for="imagen">Imagen del producto:</label>
+                <input type="file" id="imagen" name="imagen" required>
+            </div>
+            <div class="form-group">
+                <label for="precio">Cantidad del producto:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" required>
+            </div>
+            <button type="submit" class="submit-btn">Publicar Producto</button>
+        </form>
+    </div>
+</body>
+</html>

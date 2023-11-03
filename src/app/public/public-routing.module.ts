@@ -7,6 +7,7 @@ import { LoginComponent } from './login/components/login/login.component';
 import { HovbarComponent } from '../core/shared/components/hovbar/hovbar.component';
 import { RegisterComponent } from './register/register.component';
 import { CardproductComponent } from './cardproduct/cardproduct.component';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 
 const routes: Routes = [ 
@@ -17,7 +18,8 @@ const routes: Routes = [
        { path:'login', component: LoginComponent},
        { path: "hovbar", component: HovbarComponent},
        { path: "register", component: RegisterComponent},
-       { path: "product", component: CardproductComponent}
+       { path: "product", component: CardproductComponent},
+       { path: "product-form", component: ProductFormComponent}
     ]
   }
 ]

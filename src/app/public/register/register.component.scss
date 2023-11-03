@@ -1,0 +1,82 @@
+*¨{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(188deg, #4ba9e9, #4ba9e9 50%, #fff 50%, #fff 100%);
+}
+.form-registro{
+    width: 300px;
+    background: white;
+    padding: 50px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 2%;
+    font-family: 'calibri';
+    color: black;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-registro h1{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.controls{
+    width: 100%;
+    background: white;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+    font-family: 'calibri';
+    font-size: 18px;
+}
+.form-registro p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.form-registro a{
+    color: white;
+    text-decoration: none;
+}
+
+.form-registro a:hover{
+    color: white;
+    text-decoration: underline;
+    transition: 6s;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    background: #2271b3;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 7px 13px 37px #000;
+
+}
+
+input[type="submit"]:hover{
+     border-color:#2271b3;
+     transition: .5s;
+}
+
+.botons{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #2271b3;
+    text-decoration: none;
+
+
+}
+
+.botons a:hover{
+    text-decoration: underline;
+    }

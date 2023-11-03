@@ -8,6 +8,8 @@ import { LoginComponent } from './login/components/login/login.component';
 import { HovbarComponent } from '../core/shared/components/hovbar/hovbar.component';
 import { RegisterComponent } from './register/register.component';
 import { CardproductComponent } from './cardproduct/cardproduct.component';
+import { ProductFormComponent } from './product-form/product-form.component';
+
 
 
 
@@ -18,7 +20,9 @@ import { CardproductComponent } from './cardproduct/cardproduct.component';
     LoginComponent,
     HovbarComponent,
     RegisterComponent,
-    CardproductComponent
+    CardproductComponent,
+    ProductFormComponent,
+    
   ],
   imports: [
     CommonModule,
