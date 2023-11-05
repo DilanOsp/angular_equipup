@@ -1,20 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <section class="form-registro">
-        <h1>INICIO DE SESION</h1>
-        <input class="controls" type="text" name="nombre" id="nombres"placeholder="Nombre de Usuario">
-        <input class="controls" type="password" name="nombre" id="nombres"placeholder="Ingrese su contraseña">
-        <input class="botons" type="submit" value="Registrar">
-        <p> <a routerLink="/register"> Registrate Aqui</a></p>
-      
-    
-    </section>
-    
-</body>
-</html>
+<mat-card>
+    <mat-card-content>
+      <div class="header">
+        <P>Inicio de sesion  </P>
+      </div>
+      <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+        <div class="emailInput">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Correo electronico</mat-label>
+            <input
+              formControlName="email"
+              matInput
+              placeholder="Enter email address" required
+            />
+            <mat-error *ngIf="!loginForm.controls['email'].valid">
+                este campo es necesario
+              </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
+            <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>
+                {{hide ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+        </button>
+        <mat-error *ngIf="!loginForm.controls['password'].valid">
+            este campo es necesario
+          </mat-error>
+        </mat-form-field>
+        </div>
+        <button mat-flat-button color="primary">Ingresar</button>
+      </form>
+
+      <div class="button-row">
+        <p>Crea una cuenta</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
