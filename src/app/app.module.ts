@@ -12,6 +12,7 @@ import { LoginComponent } from './public/login/components/login/login.component'
 import { MatIconModule } from '@angular/material/icon';
 
 import {ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
     
   ],
   providers: [],

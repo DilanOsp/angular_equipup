@@ -11,6 +11,7 @@
               formControlName="email"
               matInput
               placeholder="Enter email address" required
+              [(ngModel)]="mail"
             />
             <mat-error *ngIf="!loginForm.controls['email'].valid">
                 este campo es necesario
@@ -21,7 +22,7 @@
         <div>
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Contraseña</mat-label>
-            <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
+            <input formControlName="password"[(ngModel)]="password" matInput [type]=" hide ? 'password' : 'text'" required />
             <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
             [attr.aria-pressed]="hide">
             <mat-icon>

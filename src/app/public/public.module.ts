@@ -8,6 +8,7 @@ import { HovbarComponent } from '../core/shared/components/hovbar/hovbar.compone
 import { RegisterComponent } from './register/register.component';
 import { CardproductComponent } from './cardproduct/cardproduct.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,11 +22,13 @@ import { ProductFormComponent } from './product-form/product-form.component';
     CardproductComponent,
     ProductFormComponent,
     
+    
   ],
   imports: [
     CommonModule,
     PublicRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class PublicModule { }
