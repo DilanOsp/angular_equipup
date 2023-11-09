@@ -6,15 +6,19 @@ import { RouterModule } from '@angular/router';
 
 
 
+
 @NgModule({
   declarations: [
    NotFoundComponent,
+
+  
    
   ],
   imports: [
     CommonModule,
     HttpClientModule,
     RouterModule,
+    
   ],
   exports:[
     HttpClientModule,

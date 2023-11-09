@@ -6,9 +6,12 @@ import { PublicComponent } from './public/public.component';
 import { HomeComponent } from './home/containers/home/home.component';
 import { HovbarComponent } from '../core/shared/components/hovbar/hovbar.component';
 import { RegisterComponent } from './register/register.component';
-import { CardproductComponent } from './cardproduct/cardproduct.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CardComponent } from '../core/shared/components/card/card.component';
+
+
+
 
 
 
@@ -19,16 +22,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     HovbarComponent,
     RegisterComponent,
-    CardproductComponent,
-    ProductFormComponent,
-    
+    ProductFormComponent,  
     
   ],
   imports: [
     CommonModule,
     PublicRoutingModule,
+    ReactiveFormsModule,
     SharedModule,
-    ReactiveFormsModule
+    CardComponent,
+    
+    
   ]
 })
 export class PublicModule { }
