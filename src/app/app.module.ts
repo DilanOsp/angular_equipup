@@ -10,6 +10,7 @@ import {MatInputModule} from '@angular/material/input';
 import { LoginComponent } from './public/login/components/login/login.component'
 import { MatIconModule } from '@angular/material/icon';
 
+
 import {ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     LoginComponent,
-    
+  
 
     
   ],
@@ -34,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     HttpClientModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule, 
+
     
     
   ],
