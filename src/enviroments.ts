@@ -4,6 +4,10 @@ export const environment = {
     user:{
         path:'user',
         get:'/get/'
+    },
+    product:{
+        path:'product'
     }
+
   };
   

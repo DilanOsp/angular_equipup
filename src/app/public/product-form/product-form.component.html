@@ -10,28 +10,28 @@
     <div class="container">
         <h3>EquipUp</h3>
         <h2>Subir un Producto</h2>
-        <form action="procesar_producto.php" method="post" enctype="multipart/form-data">
+        <form (ngSubmit)="uploadProduct()"  [formGroup]="registeForm">
             <div class="form-group">
                 <label for="nombre">Nombre del producto:</label>
-                <input type="text" id="nombre_prod" name="nombre_prod" required>
+                <input formControlName="name" type="text" id="nombre_prod" name="nombre_prod" required>
             </div>
             <div class="form-group">
                 <label for="descripcion">Descripción del producto:</label>
-                <input type="text" id="descripcion" name="descripcion" required>
+                <input type="text" formControlName = "description" id="descripcion" name="descripcion" required>
             </div>
             <div class="form-group">
                 <label for="imagen">Imagen del producto:</label>
-                <input type="file" (change)="showUrl($event)" id="fileInput" name="imagen" required>
+                <input type="file"(change)="onFileSelected($event)"  id="fileInput" name="imagen" required>
             </div>
             <div class="form-group">
                 <label for="precio">Cantidad del producto:</label>
-                <input type="number" id="cantidad" name="cantidad" required>
+                <input type="number" id="cantidad" formControlName="amount" name="cantidad" required>
             </div>
             <div class="form-group">
                 <label for="precio">Precio:</label>
-                <input type="number" id="precio" name="precio" required>
+                <input type="number" formControlName="price" id="precio" name="precio" required>
             </div>
-            <button type="submit" class="submit-btn">Publicar Producto</button>
+            <button  class="submit-btn" type="submit">Publicar Producto</button>
         </form>
     </div>
 </body>
