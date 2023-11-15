@@ -8,11 +8,11 @@ import { Component, ElementRef } from '@angular/core';
 export class ProductFormComponent {
   constructor(private el: ElementRef){}
   showUrl(event: any): void {
-    const inputArchivo = this.el.nativeElement.querySelector('#imagen');
+    const inputFile = this.el.nativeElement.querySelector('#fileInput');
 
-    if (inputArchivo && inputArchivo.files && inputArchivo.files.length > 0) {
-      const direccionArchivo = inputArchivo.files[0].name;
-      console.log('Nombre del archivo seleccionado: ' + direccionArchivo);
+    if (inputFile && inputFile.files && inputFile.files.length > 0) {
+      const url = inputFile.files[0].name;
+      console.log('Nombre del archivo seleccionado: ' + url);
     }
   }
 
