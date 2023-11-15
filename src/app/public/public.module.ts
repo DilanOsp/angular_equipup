@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from '../core/shared/components/card/card.component';
 
 
+
 @NgModule({
   declarations: [
     PublicComponent,
@@ -18,6 +19,7 @@ import { CardComponent } from '../core/shared/components/card/card.component';
     ProductFormComponent,  
     HomeComponent,
     HovbarComponent,
+   
     
   ],
   imports: [

@@ -1,12 +1,16 @@
 
 .card-class{
-  margin: 0;
-  padding: 0;
   width: 18%;
-  text-align: left;
+  text-align: justify;
   float: left;
-  border: solid;
-  border-color: rgb(64, 147, 224);
   background-color: rgb(235, 230, 230);
-  
+  display: flex;
+}
+
+.alquilar{
+  margin-left: 50px;
+}
+
+.precio{
+  margin-left: 15px;
 }

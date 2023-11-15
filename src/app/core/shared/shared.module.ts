@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http'
 import { NotFoundComponent } from './components/not-found/not-found/not-found.component';
 import { RouterModule } from '@angular/router';
-
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -12,10 +13,8 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
    NotFoundComponent,
-  
 
-  
-   
+
   ],
   imports: [
     CommonModule,
@@ -27,7 +26,10 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     NotFoundComponent,
     RouterModule,
-    
+    MatToolbarModule, 
+    MatButtonModule, 
+    MatIconModule,
+    MatToolbarModule,
     
   ]
 })
