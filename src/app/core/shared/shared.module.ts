@@ -5,8 +5,9 @@ import { NotFoundComponent } from './components/not-found/not-found/not-found.co
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { CardComponent } from './components/card/card.component';
-
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -16,10 +17,8 @@ import { CardComponent } from './components/card/card.component';
    NotFoundComponent,
 
 
-  
 
-  
-   
+
   ],
   imports: [
     CommonModule,
@@ -35,9 +34,10 @@ import { CardComponent } from './components/card/card.component';
     HttpClientModule,
     NotFoundComponent,
     RouterModule,
-
-
-    
+    MatToolbarModule, 
+    MatButtonModule, 
+    MatIconModule,
+    MatToolbarModule,
     
   ]
 })

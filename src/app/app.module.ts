@@ -11,6 +11,7 @@ import { LoginComponent } from './public/login/components/login/login.component'
 import { MatIconModule } from '@angular/material/icon';
 
 
+
 import {ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -19,8 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     LoginComponent,
-  
-
     
   ],
   imports: [
@@ -39,8 +38,6 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
 
 
-    
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,18 +10,19 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { CardComponent } from '../core/shared/components/card/card.component';
 
 
+
 const routes: Routes = [ 
   {
     path: '', component: PublicComponent, children:[
-       { path: '', redirectTo: 'home', pathMatch: 'full'},
+       { path: '', redirectTo: 'login', pathMatch: 'full'},
        { path: 'home', component: HomeComponent},
        { path:'login', component: LoginComponent},
        { path: "hovbar ", component: HovbarComponent},
        { path: "register", component: RegisterComponent},
        { path: "product-form", component: ProductFormComponent},
-       { path: 'card', component: CardComponent}
-    ]
-  }
+       { path: 'card', component: CardComponent},
+      ]
+ }
 ]
 
 @NgModule({
