@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from '../core/shared/components/card/card.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CardComponent } from '../core/shared/components/card/card.component';
     ProductFormComponent,  
     HomeComponent,
     HovbarComponent,
+
     
   ],
   imports: [
@@ -26,6 +28,7 @@ import { CardComponent } from '../core/shared/components/card/card.component';
     ReactiveFormsModule,
     SharedModule,
     CardComponent,
+
     
     
   ]
