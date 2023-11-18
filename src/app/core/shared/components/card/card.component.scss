@@ -14,3 +14,35 @@
 .precio{
   margin-left: 15px;
 }
+.card-class[_ngcontent-ng-c897607562] {
+  margin: 10px;
+  height: 376px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mat-mdc-card-md-image {
+  width: 234px;
+  height: 134px;
+}
+
+
+.mat-mdc-card-content {
+  flex-grow: 1;
+  overflow: hidden;
+}
+.mdc-card__actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 52px;
+  padding: 8px;
+  margin-top: auto;
+}
+.description{
+  overflow: auto;
+}
+
