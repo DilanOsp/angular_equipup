@@ -19,7 +19,7 @@ import { CardComponent } from '../core/shared/components/card/card.component';
     ProductFormComponent,  
     HomeComponent,
     HovbarComponent,
-   
+
     
   ],
   imports: [
