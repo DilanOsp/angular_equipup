@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Route, Router } from '@angular/router';
 import { UserService } from 'src/app/shared/servces/user.service';
 
 
@@ -15,7 +17,7 @@ export class LoginComponent implements OnInit {
   password: string = '';
 
 
-  constructor(private fb: FormBuilder, private userService: UserService) {
+  constructor(private router: Router,private _snackBar: MatSnackBar,private fb: FormBuilder, private userService: UserService) {
   }
 
   ngOnInit() {
@@ -26,21 +28,25 @@ export class LoginComponent implements OnInit {
     password: ['', [Validators.required, Validators.minLength(3)]]
   })
 
-
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000, 
+    });
+  }
+  
   onLogin() {
     if (!this.loginForm.valid) {
       return;
     }
+    
     this.userService.getByMail(this.mail).subscribe((data)=>{
       if(data == null){
-        //feedback de que el usuario no existe
-        console.log('el usuario no existe')
+        this.openSnackBar('el usuario no existe', 'Cerrar');
+
       }else if(data.password == this.password){
-        //redirigir al inicio
-        console.log('valido') 
+        this.router.navigate(['/home']);
       }else{
-        //feedback de que la contraseña es incorrecta
-        console.log('contraseña incorrecta')
+        this.openSnackBar('contraseña incorrecta', 'Cerrar');
       }
 
 
