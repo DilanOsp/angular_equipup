@@ -1,48 +1,39 @@
+/* Estilo para la card principal */
+.mat-card {
+  width: 300px; /* Ajusta el ancho según tus preferencias */
+  margin: 16px; /* Espaciado entre las cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sutil sombra para destacar */
+  transition: box-shadow 0.3s ease; /* Animación suave al pasar el mouse */
 
-.card-class{
-  width: 18%;
-  text-align: justify;
-  float: left;
-  background-color: rgb(235, 230, 230);
-  display: flex;
-}
-
-.alquilar{
-  margin-left: 50px;
+  /* Ajusta los bordes si lo deseas */
+  border-radius: 8px;
 }
 
-.precio{
-  margin-left: 15px;
-}
-.card-class[_ngcontent-ng-c897607562] {
-  margin: 10px;
-  height: 376px;
-  width: 260px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Estilo para el título */
+.title {
+  font-size: 1.5rem; /* Tamaño del título */
+  font-weight: bold; /* Texto en negrita para destacar */
 }
 
-.mat-mdc-card-md-image {
-  width: 234px;
-  height: 134px;
+/* Estilo para la imagen */
+img {
+  width: 100%; /* La imagen ocupa el 100% del ancho de la card */
+  height: auto; /* Mantiene la proporción original de la imagen */
+  border-top-left-radius: 8px; /* Esquina redondeada arriba a la izquierda */
+  border-top-right-radius: 8px; /* Esquina redondeada arriba a la derecha */
 }
 
-
-.mat-mdc-card-content {
-  flex-grow: 1;
-  overflow: hidden;
-}
-.mdc-card__actions {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  box-sizing: border-box;
-  min-height: 52px;
-  padding: 8px;
-  margin-top: auto;
-}
-.description{
-  overflow: auto;
+/* Estilo para el contenido */
+.description {
+  padding: 16px; /* Espaciado interno para el contenido */
 }
 
+/* Estilo para el botón */
+button.Alquilar {
+  width: 100%; /* El botón ocupa el 100% del ancho del contenedor */
+}
+
+/* Transición suave al pasar el mouse sobre la card */
+.mat-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

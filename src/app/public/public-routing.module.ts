@@ -8,6 +8,8 @@ import { HovbarComponent } from '../core/shared/components/hovbar/hovbar.compone
 import { RegisterComponent } from './register/register.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { CardComponent } from '../core/shared/components/card/card.component';
+import { FooterComponent } from '../core/shared/components/footer/footer.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -21,6 +23,8 @@ const routes: Routes = [
        { path: "register", component: RegisterComponent},
        { path: "product-form", component: ProductFormComponent},
        { path: 'card', component: CardComponent},
+       { path: 'footer', component: FooterComponent},
+       { path: 'cart', component: CartComponent}
       ]
  }
 ]

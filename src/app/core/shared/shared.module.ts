@@ -8,6 +8,7 @@ import { CardComponent } from './components/card/card.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -15,9 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
    NotFoundComponent,
-
-
-
+   FooterComponent,
 
   ],
   imports: [
@@ -26,6 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
     RouterModule,
     CardComponent,
     MatCardModule,
+    MatToolbarModule,
+    MatIconModule
 
 
     
@@ -38,6 +39,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule, 
     MatIconModule,
     MatToolbarModule,
+    FooterComponent
     
   ]
 })

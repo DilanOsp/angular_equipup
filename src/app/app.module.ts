@@ -9,6 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { LoginComponent } from './public/login/components/login/login.component'
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -36,7 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatIconModule, 
     MatCardModule,
-
+    MatTableModule
 
   ],
   providers: [],
