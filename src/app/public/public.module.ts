@@ -10,6 +10,9 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from '../core/shared/components/card/card.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+import { CartComponent } from './cart/cart.component';
+
 
 
 
@@ -19,10 +22,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     RegisterComponent,
     ProductFormComponent,  
     HomeComponent,
-    HovbarComponent,
-
-
-    
+    HovbarComponent,   
+    CartComponent 
   ],
   imports: [
     CommonModule,
@@ -30,9 +31,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ReactiveFormsModule,
     SharedModule,
     CardComponent,
-    MatSnackBarModule
-
-    
+    MatSnackBarModule,
+    MatTableModule
+  
     
   ]
 })

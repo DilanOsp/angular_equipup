@@ -1,44 +1,49 @@
+/* Estilo para la card de inicio de sesión */
 mat-card {
-    max-width: 600px;
-    margin: 2em auto;
-    text-align: center;
-    max-height: 600px;
-  }
-  
-  .header{
-    text-align: center;
-  
-  }
-  .full-width {
-    width: 80%;
-  }
-  
-  .button-row {
-    padding-top: 5px;
-  }
-  
-  .button-row a {
-    margin-right: 8px;
-    text-align: center;
-  }
-  
-  .forget-password{
-    padding-left: 0px;
-  }
-  
-  .emailInput{
-    padding-top: 10px;
-  }
-  
-  .contentBody {
-    padding: 60px 1rem;
-    background :#1b6ca8;
-    display: block;
-  }
-  
-  .aLink{
-    float: right;
-    padding-right: 60px;
-    text-decoration: none;
-  }
-  
+  width: 400px; /* Ajusta el ancho según tus preferencias */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.514); /* Sutil sombra para destacar */
+  border-radius: 8px; /* Bordes redondeados */
+  box-sizing: border-box; /* Asegura que el tamaño incluya el relleno y el borde */
+  width: 400px; /* Ancho aumentado */
+  margin: auto; /* Centra la card horizontalmente */
+  margin-top: 100px;
+}
+
+
+/* Estilo para el encabezado */
+.header {
+  text-align: center; /* Centra el texto */
+}
+
+/* Estilo para los campos de entrada */
+mat-form-field {
+  width: 100%; /* Ocupa el ancho completo del contenedor */
+}
+
+/* Estilo para los mensajes de error */
+mat-error {
+  font-size: 12px; /* Tamaño del texto del mensaje de error */
+  color: #ff0000; /* Color rojo para resaltar los errores */
+}
+
+/* Estilo para el botón de ingresar */
+button[color="primary"] {
+  width: 100%; /* Ocupa el ancho completo del contenedor */
+  margin-top: 16px; /* Espaciado superior para separar del resto del contenido */
+}
+
+/* Estilo para el enlace de crear una cuenta */
+.button-row {
+  text-align: center; /* Centra el enlace */
+  margin-top: 16px; /* Espaciado superior para separar del resto del contenido */
+}
+
+.button-row a {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: #2196f3; /* Color azul para resaltar el enlace */
+}
+
+.button-row a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse sobre el enlace */
+}
+/* Estilo para hacerla un poco más grande */

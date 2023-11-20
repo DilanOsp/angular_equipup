@@ -1,0 +1,44 @@
+.footer-toolbar {
+  background-color: #0a0a0a1e;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  margin-left: 45%;
+  margin-inline-end: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 5px;
+  margin-inline-end: 10px;
+}
+
+
+
+.copy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.legal {
+  margin: 10px;
+}
+
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 33%;
+}
+
+.legal-links a {
+  color: rgb(0, 0, 0);
+  margin: 5px;
+  text-decoration: none;
+}
