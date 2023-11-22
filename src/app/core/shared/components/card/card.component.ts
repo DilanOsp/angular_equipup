@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output ,Input, OnDestroy} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { productData } from 'src/app/shared/model/productData';
+import { CartService } from 'src/app/shared/servces/cart.service';
+import { LocalStorageService } from 'src/app/shared/servces/localStorage.service';
 import { ProductService } from 'src/app/shared/servces/product.service';
 
 @Component({
@@ -13,15 +15,25 @@ import { ProductService } from 'src/app/shared/servces/product.service';
   standalone: true,
   imports: [MatCardModule, MatButtonModule, MatIconModule, CommonModule],
 })
-export class CardComponent implements OnInit {
-  @Output() agregarCarrito = new EventEmitter<productData>(); // Nuevo EventEmitter para el evento de agregar al carrito
+export class CardComponent implements OnInit,OnDestroy {
+
+  
+  @Input() product!: productData; 
 
   products: productData[] = [];
-
-  constructor(private productService: ProductService) {}
+  dataSend: productData[]=[];
+  
+  
+  constructor(private productService: ProductService,private cartService:CartService, private localStorageService:LocalStorageService) {}
+  ngOnDestroy(): void {
+    this.localStorageService.setList(this.dataSend)
+  }
 
   ngOnInit(): void {
     this.getAllProducts();
+  }
+  addToList(product:productData) {
+    this.dataSend.push(product)    
   }
 
   private getAllProducts(): void {
@@ -35,8 +47,4 @@ export class CardComponent implements OnInit {
     );
   }
 
-  agregarAlCarrito(producto: productData) {
-    // Emitir el evento para agregar al carrito
-    this.agregarCarrito.emit(producto);
-  }
 }
