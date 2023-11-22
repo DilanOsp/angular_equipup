@@ -15,12 +15,14 @@ import { MatTableModule } from '@angular/material/table';
 
 import {ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './public/register/register.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    
     
   ],
   imports: [
@@ -37,8 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatIconModule, 
     MatCardModule,
-    MatTableModule
-
+    MatTableModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

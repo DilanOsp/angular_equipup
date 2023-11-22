@@ -23,7 +23,8 @@ import { CartComponent } from './cart/cart.component';
     ProductFormComponent,  
     HomeComponent,
     HovbarComponent,   
-    CartComponent 
+    CartComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -32,9 +33,8 @@ import { CartComponent } from './cart/cart.component';
     SharedModule,
     CardComponent,
     MatSnackBarModule,
-    MatTableModule
-  
-    
+    MatTableModule,
+   
   ]
 })
 export class PublicModule { }
