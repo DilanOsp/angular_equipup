@@ -4,6 +4,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { productData } from 'src/app/shared/model/productData';
 import { CartService } from 'src/app/shared/servces/cart.service';
 import { LocalStorageService } from 'src/app/shared/servces/localStorage.service';
@@ -25,13 +26,20 @@ export class CardComponent implements OnInit {
   dataSend: productData[]=[];
   
   
-  constructor(private productService: ProductService,private cartService:CartService, private localStorageService:LocalStorageService) {}
+  constructor(private _snackBar: MatSnackBar,private productService: ProductService,private cartService:CartService, private localStorageService:LocalStorageService) {}
 
   ngOnInit(): void {
     this.getAllProducts();
   }
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000, 
+    });
+  }
+
   addToList(product:productData) {
     this.localStorageService.setItem(product);
+    this.openSnackBar("producto añadido","cerrar")
   }
 
   private getAllProducts(): void {
