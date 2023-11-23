@@ -12,6 +12,7 @@ import { CardComponent } from '../core/shared/components/card/card.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { CartComponent } from './cart/cart.component';
+import { MyProductComponent } from './my-product/my-product.component';
 
 
 
@@ -23,7 +24,8 @@ import { CartComponent } from './cart/cart.component';
     ProductFormComponent,  
     HomeComponent,
     HovbarComponent,   
-    CartComponent 
+    CartComponent, MyProductComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -32,9 +34,8 @@ import { CartComponent } from './cart/cart.component';
     SharedModule,
     CardComponent,
     MatSnackBarModule,
-    MatTableModule
-  
-    
+    MatTableModule,
+   
   ]
 })
 export class PublicModule { }
