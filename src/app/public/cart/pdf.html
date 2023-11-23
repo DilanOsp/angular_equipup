@@ -1,0 +1,24 @@
+<div id="contenido-a-exportar">
+    <h2>Factura</h2>
+    <p>Cliente: {{ factura.cliente }}</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of factura.items">
+          <td>{{ item.nombre }}</td>
+          <td>{{ item.cantidad }}</td>
+          <td>{{ item.precioUnitario | currency:'USD':'symbol' }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Total: {{ factura.total | currency:'USD':'symbol' }}</p>
+  </div>
+  
+  <button (click)="generarPDF()">Generar PDF</button>
+  
