@@ -10,6 +10,7 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { CardComponent } from '../core/shared/components/card/card.component';
 import { FooterComponent } from '../core/shared/components/footer/footer.component';
 import { CartComponent } from './cart/cart.component';
+import { MyProductComponent } from './my-product/my-product.component';
 
 
 
@@ -24,7 +25,8 @@ const routes: Routes = [
        { path: "product-form", component: ProductFormComponent},
        { path: 'card', component: CardComponent},
        { path: 'footer', component: FooterComponent},
-       { path: 'cart', component: CartComponent}
+       { path: 'cart', component: CartComponent},
+       { path: 'myproduct', component:MyProductComponent}
       ]
  }
 ]

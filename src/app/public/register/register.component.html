@@ -1,13 +1,12 @@
-
-<body>
-    <section class="form-registro">
-        <h1>REGISTRO EQUIP UP</h1>
-        <form [formGroup]="registeForm" (ngSubmit)="onSubmit()">
+   
+        
+        <form  class="form-registro"  [formGroup]="registeForm" (ngSubmit)="onSubmit()">
+            <h1>REGISTRO EQUIP UP</h1>
                 <input class="controls" formControlName="userName" type="text" name="nombre" id="nombres"placeholder="Ingrese su Nombre">
                 <input class="controls" formControlName="mail" type="email" name="nombre" id="nombres"placeholder="Ingrese su Correo">
                 <input class="controls" formControlName="password" type="password" name="nombre" id="nombres"placeholder="Ingrese su contraseña">
                 <input class="botons" type="submit" value="Registrar">
+                <a routerLink="/login">Ya tengo una cuenta</a>
         </form>
-    </section>
-    
-</body>
+
+
