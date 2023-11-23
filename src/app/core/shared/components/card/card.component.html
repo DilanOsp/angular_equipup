@@ -16,8 +16,8 @@
     </mat-card-content>
     <mat-card-actions>
       <div class="button-wrapper">
-        <mat-card-title class="precio">15.000$</mat-card-title>
-        <button mat-button class="btn cart" > agregar al carrito</button>
+        <mat-card-title class="precio">{{product.product.price}}$</mat-card-title>
+        <button mat-button class="btn cart" (click)="addToList(product)"> agregar al carrito</button>
       </div>
     </mat-card-actions>
     <mat-card-footer></mat-card-footer>

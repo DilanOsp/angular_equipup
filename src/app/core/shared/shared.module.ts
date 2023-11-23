@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FooterComponent } from './components/footer/footer.component';
+import { MatBadgeModule } from '@angular/material/badge';
 
 
 
@@ -39,7 +40,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatButtonModule, 
     MatIconModule,
     MatToolbarModule,
-    FooterComponent
+    FooterComponent,
+    MatBadgeModule
     
   ]
 })

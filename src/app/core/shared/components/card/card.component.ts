@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output ,Input, OnDestroy} from '@angular/core';
+import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,7 +16,7 @@ import { ProductService } from 'src/app/shared/servces/product.service';
   standalone: true,
   imports: [MatCardModule, MatButtonModule, MatIconModule, CommonModule],
 })
-export class CardComponent implements OnInit,OnDestroy {
+export class CardComponent implements OnInit {
 
   
   @Input() product!: productData; 
@@ -25,15 +26,12 @@ export class CardComponent implements OnInit,OnDestroy {
   
   
   constructor(private productService: ProductService,private cartService:CartService, private localStorageService:LocalStorageService) {}
-  ngOnDestroy(): void {
-    this.localStorageService.setList(this.dataSend)
-  }
 
   ngOnInit(): void {
     this.getAllProducts();
   }
   addToList(product:productData) {
-    this.dataSend.push(product)    
+    this.localStorageService.setItem(product);
   }
 
   private getAllProducts(): void {
