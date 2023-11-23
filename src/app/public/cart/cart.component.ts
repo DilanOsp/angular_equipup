@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { productData } from 'src/app/shared/model/productData';
+import { CartService } from 'src/app/shared/servces/cart.service';
+import { LocalStorageService } from 'src/app/shared/servces/localStorage.service';
+
+
 
 export interface PeriodicElement {
   name: string;
@@ -7,38 +13,34 @@ export interface PeriodicElement {
   symbol: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Taladro', weight: 1, symbol: '10.000' },
-  { position: 2, name: 'Sillas', weight: 12, symbol: '20.000' },
-  { position: 3, name: 'Lavadora', weight: 1, symbol: '8.000' },
-];
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss'],
 })
-export class CartComponent {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'delete', 'buy'];
-  dataSource = ELEMENT_DATA;
+export class CartComponent implements OnInit{
+  constructor(private cartService:CartService, private localStorageService:LocalStorageService){}
+  dataSource = new MatTableDataSource<productData>([]);
+  ngOnInit(): void {
+    const ELEMENT_DATA: productData[] = this.localStorageService.getList();
+    this.dataSource.data = ELEMENT_DATA;
 
-  // Nuevas funciones para los botones
-  eliminarElemento(element: PeriodicElement): void {
-    // Lógica para eliminar el elemento, por ejemplo, eliminarlo del dataSource
-    this.dataSource = this.dataSource.filter(e => e !== element);
   }
 
+  displayedColumns: string[] = ['image', 'name', 'price', 'delete'];
+
+  eliminarElemento(element: productData): void {
+  }
+
+
   comprarElemento(element: PeriodicElement): void {
-    // Lógica para comprar el elemento, puedes implementar lo que necesites aquí
     console.log('Comprar elemento:', element);
   }
   calcularTotal(): string {
-    const total = this.dataSource.reduce((acc, curr) => acc + parseFloat(curr.symbol), 0);
-    return total.toFixed(3); // Ajusta el número de decimales según tus necesidades
+    return '';
   }
-  // Función para comprar todo
   comprarTodo(): void {
-    // Lógica para comprar todo, por ejemplo, enviar la lista al servidor
     console.log('Comprar todo:', this.dataSource);
   }
 }
