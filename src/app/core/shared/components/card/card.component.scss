@@ -1,39 +1,103 @@
-/* Estilo para la card principal */
-.mat-card {
-  width: 300px; /* Ajusta el ancho según tus preferencias */
-  margin: 16px; /* Espaciado entre las cards */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sutil sombra para destacar */
-  transition: box-shadow 0.3s ease; /* Animación suave al pasar el mouse */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-  /* Ajusta los bordes si lo deseas */
-  border-radius: 8px;
+body {
+  /* solid background */
+  background: rgb(0,212,255);
+  background: linear-gradient(45deg, rgba(0,212,255,1) 0%, rgba(11,3,45,1) 100%);    
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;    
+  height: 100vh;  
 }
 
-/* Estilo para el título */
-.title {
-  font-size: 1.5rem; /* Tamaño del título */
-  font-weight: bold; /* Texto en negrita para destacar */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgba(255, 255, 255, 0.125);  
+  padding: 11px;  
+  justify-content: space-between;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 12px;
+  
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  text-align: center;
+  
+}
+   .card-class {
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(20% - 1px); /* Ajusta el ancho de las tarjetas y reduce el espacio entre ellas */
+    margin-bottom: 10px; /* Agrega un margen inferior entre las tarjetas */
+   display: flex;
+   margin-left: 2px;
 }
 
-/* Estilo para la imagen */
-img {
-  width: 100%; /* La imagen ocupa el 100% del ancho de la card */
-  height: auto; /* Mantiene la proporción original de la imagen */
-  border-top-left-radius: 8px; /* Esquina redondeada arriba a la izquierda */
-  border-top-right-radius: 8px; /* Esquina redondeada arriba a la derecha */
+.img{
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255, 0.255)
 }
 
-/* Estilo para el contenido */
-.description {
-  padding: 16px; /* Espaciado interno para el contenido */
+h1{
+  font-family: 'Righteous', sans-serif;
+  color: rgba(0, 0, 0, 0.98);
+  text-transform: uppercase;
+  font-size: 1.4rem;
 }
 
-/* Estilo para el botón */
-button.Alquilar {
-  width: 100%; /* El botón ocupa el 100% del ancho del contenedor */
+p {
+  color: #000000;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 150%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-/* Transición suave al pasar el mouse sobre la card */
-.mat-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.precio{
+  font-family: 'Righteous', sans-serif;
+  color: rgba(0, 0, 0, 0.98);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin-left: 25px;
+}
+
+.button-wrapper{
+  margin-top: 12px;
+  margin-left: 15px;
+}
+
+.btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;  
+  letter-spacing: 2px;  
+  cursor: pointer;
+}
+
+
+.cart{
+  background: rgba(0, 212, 255, 0.9);
+  color: rgba(255,255,255,0.95);
+  filter: drop-shadow(0);
+  transition: all .3s ease; 
+}
+
+.cart:hover{
+  transform: scale(1.125);  
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+  transition: all .3s ease;    
 }

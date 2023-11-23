@@ -41,6 +41,7 @@ export class CartComponent implements OnInit{
     this.localStorageService.delete(element);
     this.dataSource.data = this.localStorageService.getList();
     this.total = this.dataSource.data.reduce((total, product) => total + product.product.price, 0);
+    console.log(this.total)
 
 
 
